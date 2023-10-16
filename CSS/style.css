@@ -15,10 +15,6 @@ body {
     background: #fff;
 }
 
-.header-body {
-    padding: 10px;
-}
-
 /* Navbar */
 .navbar {
     width: 100%;
@@ -31,7 +27,7 @@ body {
 }
 
 .logo {
-    width: 170px;
+    width: 180px;
     cursor: pointer;
 }
 
@@ -70,6 +66,7 @@ body {
 
 .menu {
     display: none;
+    cursor: pointer;
 }
 
 .menu-line {
@@ -137,49 +134,14 @@ body {
 }
 
 .content h1 {
-    font-size: 30px;
-    font-family:'Gabarito', cursive;
-    font-weight: 500;
-}
-
-.content h2 {
-    font-size: 20px;
-    font-family:'Gabarito', cursive;
-    font-weight: 500;
-    margin-top: 15px;
+    font-size: 28px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
 }
 
 .content a {
     color: #9908ff;
     text-decoration: none;
-}
-
-/* Main layout; responsive  */
-.column {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.main {
-    flex: 70%;
-    padding-right: 20px;
-}
-
-.side {
-    flex: 30%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Left */
-/** Subheading; under title, above image **/
-.main-img {
-    width: 100%;
 }
 
 .subheading {
@@ -212,7 +174,7 @@ body {
     color: #fff;
 }
 
-/** Author Credentials **/
+/** author credentials **/
 .author-share {
     margin-bottom: 30px;
     border-bottom: 1px solid #ccc;
@@ -243,14 +205,57 @@ figcaption {
     padding-bottom: 18px;
 }
 
-/** Article text **/
+/* Main layout; responsive  */
+.column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    flex: 70%;
+    padding-right: 20px;
+}
+
+.side {
+    flex: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Left */
+.header-h2 {
+    font-size: 20px;
+    font-family:'Gabarito', cursive;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.header-h3 {
+    font-size: 18px;
+    font-family:'Gabarito', cursive;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.main-img {
+    width: 100%;
+}
+
+/** Left; article text **/
 
 .body-text {
     font-family:'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.5;
-    padding: 10px;
+    padding: 7px 0;
     text-align: justify;
 }
 
@@ -260,11 +265,12 @@ figcaption {
     padding-bottom: 10px;
 }
 
-.body-text-container li{
+.body-text li {
     margin-left: 20px;
+    padding-left: 5px;
 }
 
-/** share icons below article text 
+/** Left; share icons **/
 .share {
     margin-left: auto;
     display: inline-flex;
@@ -301,7 +307,10 @@ figcaption {
     font-family: 'Work Sans', sans-serif;
 }
 
- Right 
+/* Right */
+.right-section {
+    margin-top: 0;
+}
 
 .right-title {
     color:#fff;
@@ -309,6 +318,10 @@ figcaption {
     display: table;
     text-align: center;
     padding: 5px 10px;
+    font-size: 18px;
+    font-family:'Gabarito', cursive;
+    font-weight: 500;
+    margin-top: 15px;
 }
 
 .right-header {
@@ -316,11 +329,7 @@ figcaption {
     margin-bottom: 10px;
 }
 
-.right-section {
-    margin-top: 50px;
-}
-
- Right; News posts 
+/** Right; News posts **/
 .news-posts {
     display: grid;
     gap: 20px;
@@ -356,122 +365,14 @@ figcaption {
     width: 15px;
 }
 
- Right; featured vids 
-.vid {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
- Media query - Columns 
+/** Media query - Columns **/
 @media all and ( max-width: 992px ) {
     .column {
         flex-direction: column;
     }
 }
 
-@media all and ( max-width: 600px ) {
-
-    /*.content h1 {
-        font-size: 5.5vw;
-    }
-
-    .topic {
-        margin-top: 40px;
-        font-size: 3vw;
-    }
-
-    .subheading {
-        font-size: 3.9vw;
-    }
-
-    .body-text {
-        font-size: 2.8vw;
-    }
-
-    .author-text {
-        font-size: 2.7vw;
-    }
-
-    .author-date,
-    .author,
-    .staff,
-    .caption {
-        font-size: 3.2vw;
-    } 
-
-} 
-
- Bottom row; below article text 
-.bottom {
-    margin-top: 30px;
-    margin-bottom: 70px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-.bottom-row {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.related-posts {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-.related-img {
-    width: 100%;
-}
-
-.related-post-content {
-    padding: 15px;
-}
-
-.below-title a {
-    margin-bottom: 10px;
-    font-size: 13px;
-    font-family:'Work Sans', sans-serif;
-    font-weight: 500;
-    color: #4e4e4e;
-}
-
-.below-title {
-    padding-bottom: 10px;
-}
-
-.related-title {
-    margin-bottom: 10px;
-    font-size: 13px;
-    font-family:'Work Sans', sans-serif;
-    font-weight: 500;
-}
-
-.related-text {
-    font-family:'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.post-author,
-.fa-user {
-    color: #4e4e4e;
-    font-size: 12px;
-    font-family:'Work Sans', sans-serif;
-    width: 15px;
-}
-
- Media query - Bottom Row 
-@media all and ( max-width: 992px ) {
-    .bottom-row {
-        flex-direction: column;
-    }
-}
- All of the above isn't needed in Oblig 2 */
-
- /* footer */
+/* footer */
 .footer {
     background: #0b0e16;
     color: #fff;
@@ -502,7 +403,7 @@ figcaption {
     font-family:'Gabarito', cursive;
     font-weight: 500;
     text-transform: uppercase;
-} 
+}
 
 .footer-heading {
     display: flex;
@@ -518,7 +419,7 @@ figcaption {
     text-decoration: none;
     color: #fff;
     padding-bottom: 2px;
-} 
+}
 
 .footer-dropdown {
     display: none;
@@ -537,6 +438,20 @@ figcaption {
     font-weight: 300;
     font-size: 13px;
     line-height: 1.8;
+}
+
+.footer ul li {
+    color: #fff;
+    text-decoration: none;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.names {
+    display: flex;
+    gap: 7px;
 }
 
 .box a {
@@ -558,13 +473,12 @@ figcaption {
     padding-bottom: 20px;
 }
 
-/*
 .footer-text3 {
     font-family:'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
-} Not in Oblig 2 */
+}
 
 .footer-right-content.right {
     flex: 30%;
@@ -591,7 +505,7 @@ hr {
 .icons i{
     padding: 4px;
 }
-/*
+
 .inputSubmit {
     background-color: #9908ff;
     color: #fff;
@@ -609,7 +523,6 @@ hr {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
-Not Oblig 2 */
 
 @media screen and (max-width: 992px) {
     .footer-row {
