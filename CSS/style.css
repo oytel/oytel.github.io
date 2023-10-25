@@ -27,8 +27,8 @@ body {
 }
 
 .logo {
-    width: 70px;
-    padding: 5px;
+    width: 100px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -271,43 +271,6 @@ figcaption {
     padding-left: 5px;
 }
 
-/** Left; share icons **/
-.share {
-    margin-left: auto;
-    display: inline-flex;
-    gap: 10px;
-    border: 1px solid #ccc;
-    padding: 8px 10px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.share-icons a {
-    font-weight: 500;
-    font-size: 19px;
-}
-
-.share-icons .facebook {
-    color: #305298;
-}
-
-.share-icons .twitter {
-    color: #159ef2;
-}
-
-.share-icons .linkedin {
-    color: #0077b5;
-}
-
-.share-icons i{
-    padding: 0 8px;
-}
-
-.share-text {
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* Right */
 .right-section {
     margin-top: 0;
@@ -495,34 +458,6 @@ figcaption {
 
 hr {
     margin-top: 20px;
-}
-
-.icons a {
-    font-weight: 500;
-    font-size: 15px;
-    color: black;
-}
-
-.icons i{
-    padding: 4px;
-}
-
-.inputSubmit {
-    background-color: rgb(255,129,0);
-    color: black;
-    font-size: 11px;
-    padding: 3px 10px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    border-color: rgb(255,129,0);
-}
-
-.inputEmail {
-    font-size: 11px;
-    padding: 3px 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
 }
 
 @media screen and (max-width: 992px) {
