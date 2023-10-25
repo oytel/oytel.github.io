@@ -19,7 +19,7 @@ body {
 .navbar {
     width: 100%;
     margin-top: 30px;
-    background: #0b0e16;
+    background: rgb(255,220,0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,8 @@ body {
 }
 
 .logo {
-    width: 180px;
+    width: 70px;
+    padding: 5px;
     cursor: pointer;
 }
 
@@ -41,22 +42,22 @@ body {
 }
 
 .navbar a {
-    font-family: 'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 13px;
-    color: #fff;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .nav-list li a:hover,
 .nav-list li a.active {
-    color: #ece0ff;
+    color: black;
 }
 
 .nav-list li a:hover,
 .nav-list li a.active { 
-    border-bottom: 4px solid #9908ff;
+    border-bottom: 4px solid rgb(255,129,0);
 }
 
 .nav-btns {
@@ -106,7 +107,7 @@ body {
     .nav-list li a:hover,
     .nav-list li a.active { 
         border-bottom: 0;
-        color: #9908ff;
+        color: rgb(255,129,0);
     }
 
     .nav-btns {
@@ -135,12 +136,12 @@ body {
 
 .content h1 {
     font-size: 28px;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 
 .content a {
-    color: #9908ff;
+    color: rgb(255,129,0);
     text-decoration: none;
 }
 
@@ -152,13 +153,13 @@ body {
 
 .subheading {
     font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     margin-top: 15px;
 }
 
 .topic {
-    color:#fff;
+    color: #fff;
     background-color: #0b0e16;
     display: table;
     text-align: center;
@@ -184,7 +185,7 @@ body {
 .author {
     font-weight: 600;
     font-size: 15px;
-    font-family:'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     padding-right: 3px;
     color: #000;
 }
@@ -192,12 +193,12 @@ body {
 .author-date {
     font-weight: 400;
     font-size: 15px;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #484848;
 }
 
 figcaption {
-    font-family: 'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     color: #4e4e4e;
     text-decoration: none;
@@ -230,7 +231,7 @@ figcaption {
 /* Left */
 .header-h2 {
     font-size: 20px;
-    font-family:'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -238,7 +239,7 @@ figcaption {
 
 .header-h3 {
     font-size: 18px;
-    font-family:'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -251,7 +252,7 @@ figcaption {
 /** Left; article text **/
 
 .body-text {
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.5;
@@ -304,7 +305,7 @@ figcaption {
 
 .share-text {
     font-size: 14px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Right */
@@ -313,13 +314,13 @@ figcaption {
 }
 
 .right-title {
-    color:#fff;
+    color: #fff;
     background-color: #0b0e16;
     display: table;
     text-align: center;
     padding: 5px 10px;
     font-size: 18px;
-    font-family:'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     margin-top: 15px;
 }
@@ -353,7 +354,7 @@ figcaption {
 .post-title {
     margin-bottom: 10px;
     font-size: 13px;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
 
@@ -361,7 +362,7 @@ figcaption {
 .fa-calendar {
     color: #4e4e4e;
     font-size: 12px;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 15px;
 }
 
@@ -374,8 +375,8 @@ figcaption {
 
 /* footer */
 .footer {
-    background: #0b0e16;
-    color: #fff;
+    background: rgb(255,220,0);
+    color: black;
 }
 
 .footer-row {
@@ -392,15 +393,15 @@ figcaption {
 }
 
 .footer-logo {
-    width: 190px;
+    width: 70px;
     margin-bottom: 20px;
 }
 
 .footer h4 {
-    color:#fff;
+    color: black;
     margin-bottom: 15px;
     font-size: 13px;
-    font-family:'Gabarito', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -412,12 +413,12 @@ figcaption {
 
 .footer-heading a {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 .footer h4 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     padding-bottom: 2px;
 }
 
@@ -432,18 +433,18 @@ figcaption {
 }
 
 .footer ul li a {
-    color: #fff;
+    color: black;
     text-decoration: none;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.8;
 }
 
 .footer ul li {
-    color: #fff;
+    color: black;
     text-decoration: none;
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 1.8;
@@ -455,7 +456,7 @@ figcaption {
 }
 
 .box a {
-    color: #fff;
+    color: black;
 }
 
 .footer-bottom {
@@ -466,7 +467,7 @@ figcaption {
 }
 
 .footer-text {
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5;
@@ -474,7 +475,7 @@ figcaption {
 }
 
 .footer-text3 {
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
@@ -485,7 +486,7 @@ figcaption {
 }
 
 .footer-text1 {
-    font-family:'Work Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5;
@@ -499,7 +500,7 @@ hr {
 .icons a {
     font-weight: 500;
     font-size: 15px;
-    color: #fff;
+    color: black;
 }
 
 .icons i{
@@ -507,20 +508,20 @@ hr {
 }
 
 .inputSubmit {
-    background-color: #9908ff;
-    color: #fff;
+    background-color: rgb(255,129,0);
+    color: black;
     font-size: 11px;
     padding: 3px 10px;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    border-color: #9908ff;
+    border-color: rgb(255,129,0);
 }
 
 .inputEmail {
     font-size: 11px;
     padding: 3px 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
 
@@ -556,6 +557,6 @@ hr {
     }
 
     .footerheader.active-header { 
-        border-bottom: 4px solid #9908ff;
+        border-bottom: 4px solid rgb(255,129,0);
     }
 }
