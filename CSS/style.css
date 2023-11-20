@@ -1,3 +1,4 @@
+/* universal box styling */
 *,
 *:before,
 *:after{
@@ -6,340 +7,472 @@
     box-sizing: border-box;
 } 
 
+/* This removes any default margin that may be applied by the browser. */
 body {
-    margin: 0;
+    margin: 0; 
 }
 
+/* sets the padding and background for the article */
 .article-body {
-    padding: 0 35px;
+    padding-top: 0px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+    padding-left: 35px;
     background: #fff;
 }
 
 /* Navbar */
 .navbar {
     width: 100%;
-    margin-top: 30px;
     background: rgb(255,220,0);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 40px;
 }
 
+/* sets the property for the logo */
 .logo {
     width: 100px;
     padding: 10px;
     cursor: pointer;
 }
 
+/* used to remove default bullet points from the navigation list. */
 .nav-list {
-    list-style-type: none;
+    list-style-type: none; 
 }
 
+/* sets the properties for the menu items */
 .nav-list .list-item {
     display: inline-block;
-    padding: 20px 10px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
 }
 
+/* look for links in the navbar */
 .navbar a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color:  #1A1110;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.nav-list li a:hover,
-.nav-list li a.active {
-    color: black;
-}
-
+/* look when the link in nav-list is active or cursor is hovering */
 .nav-list li a:hover,
 .nav-list li a.active { 
-    border-bottom: 4px solid rgb(255,129,0);
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #131212;
 }
 
-.nav-btns {
-    display: flex;
-    gap: 25px;
-}
-
+/* The menu and nav-list2 is for responsive media query only, hence making it invisible in wider screens */
 .menu {
     display: none;
     cursor: pointer;
 }
 
+/* 'hamburger' menu look when toggled */
 .menu-line {
     width: 20px;
-    height: 3px;
-    background-color: #fff;
-    margin-bottom: 3px;
+    height: 2px;
+    background-color:  #131212;
+    margin-bottom: 5px;
 }
 
+
+.nav-list2 {
+    display: none;
+}
+
+/** Sticky navbar **/
+/* The sticky class is added to the navbar with JS 
+when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFDC00;
+    border-bottom: none;
+} 
+
+/** Navbar; media query for responsive design on smaller screens **/
+
 @media all and (max-width: 992px) {
+    /* sets the direction of the navbar from row to column */
     .navbar {
         flex-direction: column;
         padding: 0;
         align-items: normal;
     }
-
+    
+    /* the menu is visible in a fixed position */
     .menu {
         display: block;
         position: absolute;
-        right: 50px;
-        top: 50px;
+        right: 40px;
+        top: 30px;
     }
 
-    .nav-list {
-        list-style-type: none;
-        width: 100%;
-        text-align: center;
-        padding-top: 10px;
-        display: none;
-    }
-
-    .nav-list .list-item {
-        display: block;
-        border-top: 1px solid #fff;
-    }
-
-    .nav-list li a:hover,
-    .nav-list li a.active { 
-        border-bottom: 0;
-        color: rgb(255,129,0);
-    }
-
-    .nav-btns {
-        display: none;
-    }
-
+    /* makes sure it's always a margin to the left of 20px */
     .logo {
-        margin-top: 10px;
-        margin-bottom: 8px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
+    /* sets the position of the logo to the left/start position of the flex container */
     .navbar.logo {
         align-items: flex-start;
     }
 
+    /* removes the nav-list in this view */
+    .nav-list {
+        display: none;
+    }
+
+    /* the next 4 sections sets the properties of the menu items when the 'hamburger menu' is clicked */
+    .nav-list2 {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-list2 .list-item2 {
+        display: block;
+        border-top-width: 1px;
+        border-top-color: #131212;
+        border-top-style: solid;
+        padding: 10px 0;
+    }
+
+    .nav-list2 li a:hover,
+    .nav-list2 li a.active { 
+        border-bottom: 0;
+        color: rgb(255,129,0);
+    }
     .active {
         display: block;
     }
 }
 
 /* Content */
+/* sets margin before the footer */
 .content {
-    margin-top: 5%;
+    margin-bottom: 90px;
 }
 
-.content h1 {
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+/** Content; headings & subheadings **/
+
+/* the main picture doesn't get too heigh on wide screens */
+.main-pic{
+    max-height: 600px;
+    width: 100%;
 }
 
-.content a {
-    color: rgb(255,129,0);
-    text-decoration: none;
+/* the next two sets the container and styling for the heading */
+.heading-container {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
 }
 
-.subheading {
-    display: flex;
-    align-items: center;
+.content-heading {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(204, 204, 204);
     margin-bottom: 20px;
 }
 
-.subheading {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    margin-top: 15px;
+.h1 {
+    font-size: 52px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 700;
 }
 
-.topic {
-    color: #fff;
-    background-color: #0b0e16;
-    display: table;
-    text-align: center;
-    padding: 5px 10px;
-    font-size: 13px;
-    font-family:'Gabarito', cursive;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-.topic a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/** author credentials **/
-.author-share {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 6px;
-}
-
-.author {
+.h2 {
+    font-size: 32px;
+    font-family:'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-right: 3px;
-    color: #000;
 }
 
-.author-date {
+.h3 {
+    font-size: 22px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* sets the padding for the h2 container when used */
+.h2-container {
+    padding-top: 30px;
+}
+
+/* the next three is used for different subheadings and sets different styling */
+.subheading {
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #484848;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
+.subheading-2 {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subheading-3 {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    padding-top: 20px;
+    margin: 0 10%;
+}
+
+/** Content; figures, captions & body text **/
+
+/* the next two sets the look for caption with links */
+.caption a {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 129, 0);
+    color: #1A1110;
+    text-decoration: none;
+}
+
+.caption a:hover,
+.caption a.active {
+    font-weight: 500;
+}
+
+/* The figcaption tag is used to add captions to images in the content area. This sets the styling. */
 figcaption {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: #4e4e4e;
     text-decoration: none;
     font-size: 13px;
-    padding-bottom: 18px;
+} 
+
+/* Links styling for body text */
+.body-text a {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 129, 0);
+    color: #1A1110;
+    text-decoration: none;
 }
 
-/* Main layout; responsive  */
-.column {
-    display: flex;
-    flex-wrap: wrap;
+.body-text a:hover,
+.body-text a.active {
+    border: none;
+    color: #ff8100;
 }
 
-.main {
-    flex: 70%;
-    padding-right: 20px;
-}
-
-.side {
-    flex: 30%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Left */
-.header-h2 {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.header-h3 {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.main-img {
-    width: 100%;
-}
-
-/** Left; article text **/
-
-.body-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.5;
-    padding: 7px 0;
-    text-align: justify;
-}
-
+/* sets the container with a margin of 25% on the left and right */
 .body-text-container {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-right: 25%;
+    margin-bottom: 0px;
+    margin-left: 25%;
 }
 
+/* sets the styling for the body text */
+.body-text {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* sets the margin and padding left for a good look in lists in the body text */
 .body-text li {
     margin-left: 20px;
-    padding-left: 5px;
+    padding-left: 0.4%;
 }
 
-/* Right */
-.right-section {
-    margin-top: 0;
+/* a container that sets the margin for image-text */
+.image-text-container {
+    margin-top: 0px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 30px;
 }
 
-.right-title {
-    color: #fff;
-    background-color: #0b0e16;
-    display: table;
-    text-align: center;
-    padding: 5px 10px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    margin-top: 15px;
+/* sets the display as flex and in row with a gap between */
+.image-text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
 }
 
-.right-header {
-    border-bottom: 3px solid #0b0e16;
-    margin-bottom: 10px;
+/* sets the width of the picture to 100% but also to fit the box */
+.text-img {
+    width: 100%;
+    overflow: hidden;
 }
 
-/** Right; News posts **/
-.news-posts {
-    display: grid;
+.text h2 {
+    margin-top: 20px;
+}
+
+/* used to put two images next to each other with 10px gap */
+.img-img {
+    display: flex;
+    gap: 10px;
+}
+
+/** Content; buttons **/
+/* button ref: https://www.w3schools.com/howto/howto_css_next_prev.asp */
+.readarticle {
+    background-color: rgb(255,220,0);
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1A1110;
+    float: right;
+}
+
+.openinghrs {
+    background-color: rgb(255,220,0);
+    padding-top: 6px;
+    padding-right: 15px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1A1110;
+    line-height: 1.8;
+    width: 210px;
+}
+
+/** Content; Campus Infoboxes **/
+.campus-row {
+    display: flex;
+    flex-direction: row;
     gap: 20px;
-    grid-template-columns: 1fr 3fr;
-    position: relative;
+    padding: 0 25%;
 }
 
-.news-posts {
-    border: 1px solid #ccc;
+.campus {
     margin-bottom: 10px;
+    background-color: rgb(255,220,0);
 }
 
-.post-img {
+.campus-img {
     width: 100%;
 }
 
-.news-post-content {
-    padding: 15px 20px 10px 0;
+.campus-content {
+    padding: 20px;
 }
 
-.post-title {
+.campus-title {
     margin-bottom: 10px;
+    font-size: 20px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+.campus-text {
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.campus-content a {
+    text-decoration: none;
+    color: white;
+}
+
+.readmore {
+    background-color: #1A1110;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-family: 'Raleway', sans-serif;
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
 }
 
-.post-date time,
-.fa-calendar {
-    color: #4e4e4e;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 15px;
+.campus-content a:hover,
+.campus-content a.active { 
+    font-weight: 600;
 }
 
-/** Media query - Columns **/
+/** Content; media query for responsive design on smaller screens **/
 @media all and ( max-width: 992px ) {
-    .column {
+    
+    /* changes the flex direction of the image text row
+    to be vertical (column) instead of horizontal (row), allowing 
+    for a responsive layout adjustment on smaller screens. */
+    .image-text,
+    .img-img {
         flex-direction: column;
+    } 
+    
+    .text-img {
+        order: 1;
+    }
+
+    .text {
+        order: 2;
+    }
+
+    .image-text-container {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #ccc;
+    }
+
+    .campus-row {
+        flex-direction: column;
+        padding-top: 0px;
+        padding-right: 5%;
+        padding-bottom: 0px;
+        padding-left: 5%;
+    }
+
+    .body-text-container {
+        margin-top: 0px;
+        margin-right: 10%;
+        margin-bottom: 0px;
+        margin-left: 10%;
     }
 }
 
-/* footer */
+/* Footer */
 .footer {
-    background: rgb(255,220,0);
-    color: black;
+    background:  #131212;
+    color: #fff;
 }
 
 .footer-row {
@@ -351,20 +484,25 @@ figcaption {
     gap: 90px;
 }
 
-.footer-right-content.left {
-    flex: 30%;
+.footer-column.about {
+    flex: 40%;
+}
+
+.footer-column.contact {
+    flex: 35%;
 }
 
 .footer-logo {
-    width: 70px;
+    width: 90px;
     margin-bottom: 20px;
 }
 
-.footer h4 {
-    color: black;
+/** Footer; header **/
+.footerheader {
+    color:rgb(255,220,0);
     margin-bottom: 15px;
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Poppins', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -374,21 +512,19 @@ figcaption {
     gap: 10px;
 }
 
-.footer-heading a {
+.footerheader a {
     text-decoration: none;
-    color: black;
-}
-
-.footer h4 a {
-    text-decoration: none;
-    color: black;
+    color: rgb(255,220,0);
     padding-bottom: 2px;
 }
 
+/* dropdown menu is hidden in desktop display,
+    will be made visible in responsive media query for small screen sizes */
 .footer-dropdown {
-    display: none;
+    display: none; 
 }
 
+/** Footer; list items **/
 .footer ul {
     list-style: none;
     padding-left: 0;
@@ -396,30 +532,38 @@ figcaption {
 }
 
 .footer ul li a {
-    color: black;
+    color: #fff;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.8;
 }
 
 .footer ul li {
-    color: black;
+    color: #fff;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Work Sans', sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 1.8;
 }
 
-.names {
+.emails li {
     display: flex;
-    gap: 7px;
+    flex-direction: row;
+    gap: 3px;
 }
 
-.box a {
-    color: black;
+.emails a {
+    color: #fff;
+}
+
+.emails li a:hover,
+.emails li a.active { 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
 }
 
 .footer-bottom {
@@ -430,36 +574,64 @@ figcaption {
 }
 
 .footer-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5;
     padding-bottom: 20px;
+    color: #fff;
 }
 
-.footer-text3 {
-    font-family: Arial, Helvetica, sans-serif;
+.footer-text2 {
+    font-family:'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
-}
-
-.footer-right-content.right {
-    flex: 30%;
-}
-
-.footer-text1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 1.5;
-    padding-right: 10%;
 }
 
 hr {
     margin-top: 20px;
 }
 
+/** Footer; SoMe icons **/
+.icons {
+    cursor: pointer;
+}
+
+.icons a {
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+}
+
+.icons i{
+    padding: 4px;
+}
+
+/** Footer; input form **/
+.inputSubmit {
+    background-color: #ff8100;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-color: #ff8100;
+    border-style: solid;
+}
+
+.inputEmail {
+    font-size: 11px;
+    padding: 3px 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #fff;
+}
+
+/** Footer; media query for responsive design on smaller screens **/
 @media screen and (max-width: 992px) {
     .footer-row {
         flex-direction: column;
@@ -467,7 +639,7 @@ hr {
         align-items: normal;
     }
 
-    .footer-right-content {
+    .footer-column {
         margin-top: 30px;
     }
 
@@ -489,9 +661,5 @@ hr {
 
     .active-footer {
         display: block;
-    }
-
-    .footerheader.active-header { 
-        border-bottom: 4px solid rgb(255,129,0);
     }
 }

@@ -1,98 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OsloMet Storbyuniversitetet</title>
+    <title>OsloMet Campus</title>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/952dcc46a8.js" crossorigin="anonymous"></script>
+
+    <!-- Google font import; Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- google font import; Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- google font import; Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <div class="article-body">
-        <!-- header -->
-        <header>
-            <nav class="navbar">
-                <div>
-                    <a href="index.html"><img src="img/oslomet-logo-black.svg" alt="logo" class="logo"></a>
-                </div>
+    <!-- header -->
+    <header>
+        <!-- navbar view in bigger than 992px sets logo in the middle with two unordered lists in row view without 'bulletpoints' on each side, everything is centred -->
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="list-item"><a href="technology.html">Technology</a></li>
+                <li class="list-item"><a href="accessibility.html">Accessibility</a></li>
+            </ul>
 
-                <ul class="nav-list" id="navi-list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
-                    <li class="list-item"><a href="accessibility.html">Accessibility</a></li>
-                    <li class="list-item"><a href="technology.html">Technology</a></li>
-                    <li class="list-item"><a href="pilestredet32.html">Pilestredet 32</a></li>
-                    <li class="list-item"><a href="Page2/data1200.html">Data1200</a></li>
-                </ul>
-                
-                <div class ="menu" id="menu-toggle">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </div>
-            </nav>
-        </header>
+            <div>
+                <a class="active" href="index.html"><img src="img/oslomet-logo.svg" alt="logo" class="logo"></a>
+            </div>
 
-        <!-- content -->
-        <div class="content">
-            <h1>Velkommen til OsloMet, Storbyuniversitetet!</h1>
-            <p class="subheading">Denne siden vil vise deg rundt på campus her på OsloMet!</p>
-                    <figure>
-                        <img src="img/OsloMetbilde2.jpg" class="main-img" alt="Image of OsloMet"/>
-                        <figcaption>
-                            <div>
-                                <p class="caption"><a href="img/OsloMetbilde2.jpg" data-height="100%" data-width="100%">Enlarge</a> /
-                                Photo by <a href="https://www.oslomet.no/om/ansatt/minakab/">Mina K. Abrahamsen</a> /OsloMet.</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                    
-                    <div class="body-text-container">
-                    <h2 class="header-h2">Hva gjør vi her på <a href="https://www.oslomet.no/">OsloMet</a>:</h2>
-                    <p class="body-text">Her på <a href="https://www.oslomet.no/">OsloMet</a> studeres det på mange forskjellige området og på denne siden kan du lese litt om <a href="technology.html">teknologi</a>.</p>
-                    <h2 class="header-h2">Hva er i de forskjellige byggene på <a href="https://www.oslomet.no/">OsloMet</a></h2>
-                    <p class="body-text">Vi ønsker at du skal bli bedre kjent på <a href="https://www.oslomet.no/">OsloMet</a> og derfor har vi laget en liten oversikt over de forskjellige delene av campus, som f.eks <a href="pilestredet32.html">Pilestredet 32</a>.</p>
-                    <h2 class="header-h2"><a href="accessibility.html">Tilgjengelighet</a> på denne siden</h2>
-                    <p class="body-text">Her vil vi også ha en egen side som forteller litt om hvordan vi har laget denne siden tilgjengelig for alle.</p>
-                    </div>
-        </div> <!-- content -->
-    </div> <!-- article body -->
+            <ul class="nav-list">
+                <li class="list-item"><a href="pilestredet32.html">Pilestredet 32</a></li>
+                <li class="list-item"><a href="pilestredet35.html">Pilestredet 35</a></li>
+            </ul>
+            
+             <!-- when less than 992px a hamburger menu will appear with a drop down list -->
+            <div class ="menu" id="menu-toggle"> <!-- id from js -->
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+
+            <ul class="nav-list2" id="navi-list2"> <!-- id from js -->
+                <li class="list-item2"><a class="active" href="index.html">Home</a></li>
+                <li class="list-item2"><a href="pilestredet32.html">Pilestredet 32</a></li>
+                <li class="list-item2"><a href="pilestredet35.html">Pilestredet 35</a></li>
+                <li class="list-item2"><a href="technology.html">Technology</a></li>
+                <li class="list-item2"><a href="accessibility.html">Accessibility</a></li>
+            </ul> <!-- This navlist is specific for responsive media query for smaller screens, hence will not be visibile in desktop size.-->
+        </nav>
+    </header>
+
+    <div class="content">
+        <figure>
+            <img src="img/OsloMet-3.jpg" class="main-pic" alt="Image of OsloMet"/>
+            <figcaption>
+                <p class="caption">Photo by <a href="https://www.oslomet.no/" target="_blank">OsloMet</a></p>
+            </figcaption>
+        </figure>
+        <div class="heading-container">
+            <div class="content-heading">
+                <h1 class="h1">Explore OsloMet Campus</h1>
+                <p class="subheading">Discover your accademic playground.</p>
+            </div>
+        </div>
+
+        <div class="body-text-container">
+            <p class="body-text">Welcome to OsloMet – a vibrant hub of learning, innovation, and community nestled in the heart of <a href="https://en.wikipedia.org/wiki/Oslo" target="_blank">Oslo, Norway</a>. Our campus is not just a physical space; it's a dynamic environment where ideas flourish, friendships are forged, and futures are shaped. Allow us to guide you through the diverse buildings that make up OsloMet. Each structure has its unique character and purpose, providing students, faculty, and visitors with a rich array of experiences.</p>
+            <h2 class="h2 h2-container">Navigating OsloMet Buildings</h2>
+            <p class="body-text">Our campus is designed to foster collaboration and creativity. To help you explore the various facets of OsloMet, we have dedicated sections for each significant building:</p>
+        </div>
+
+        <div class="campus-row">
+            <div class="campus">
+                <img src="/img/OsloMet-7.jpg" class="campus-img" alt="" />
+                <div class="campus-content">
+
+                    <h3 class="campus-title">Pilestredet 32</h2>
+            
+                    <p class="campus-text">Experience the heart of OsloMet at Pilestredet 32, home to a bustling cafeteria, a resourceful library, and vibrant student spaces, serving as a vibrant hub for learning and collaboration.</p>
+                    <a href="pilestredet32.html" class="readmore">read more &#8250;</a>
+                </div>
+            </div>
+
+            <div class="campus">
+                <img src="/img/OsloMet-8.jpg" class="campus-img" alt="" />
+            
+                <div class="campus-content">
+
+                    <h3 class="campus-title">Pilestredet 35</h2>
+            
+                    <p class="campus-text">Neighboring Pilestredet 32, Pilestredet 35 is a space for innovation and creativity. It is home to a multifaceted library and houses the faculties of technology, social sciences, art and design.</p>
+                    <a href="pilestredet35.html" class="readmore">read more &#8250;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-text-container">
+            <h2 class="h2 h2-container">Featured Student Article: Exploring Society and Technology</h2>
+            <p class="body-text">As part of our commitment to showcasing exceptional student work, we invite you to read a thought-provoking article titled <i>"From Innovation to Regulation: Unraveling the Debate on AI in Politics"</i> written by a talented student enrolled in our <a href="https://student.oslomet.no/en/studier/-/studieinfo/emne/DATA1100/2021/H%C3%98ST" target="_blank">DATA100: Technology and Society for Programmers</a> course within the <a href="https://student.oslomet.no/en/studier/-/studieinfo/programplan/INFORMATIK/2021/H%C3%98ST" target="_blank">IT department</a>. This exemplary piece exhibits critical thinking skills and insightful perspectives on the intersection of society and technology.</p>
+            <a href="technology.html" class="readarticle">read the featured article here &#8250;</a>
+        </div>
+    </div>
 
     <!-- footer -->
-    <footer>
-        <div class="footer">
-        
+    <div class="footer">
+        <div class="footer-container">
+
             <!-- 1st Row -->
             <div class="footer-row">
 
-                <div class="footer-right-content left">
                 <!-- 1st column -->
-                    <img src="img/oslomet-logo-black.svg" alt="logo" class="footer-logo">
-                    <p class="footer-text1"><strong>OsloMet</strong> skal være et urbant og mangfoldig universitet med tydelig internasjonalt preg, samtidig som vi er tett på samfunns- og arbeidslivets behov. Arbeidet vårt skal gjøres i en profesjonell organisasjon som er ledende å ta i bruk ny teknologi og nye løsninger.</p>
+                <div class="footer-column about">
+                    <img src="img/OsloMet-logo-2.png" alt="OsloMet" class="footer-logo">
+                    <p class="footer-text"><strong>OsloMet</strong> is committed to being a diverse and urban university with a clear international profile. We strive to be closely aligned with the needs of society and the labor market, and our work is carried out in a professional organization that is at the forefront of adopting new technology and innovative solutions. Our goal is to provide a world-class education to our students and to produce research that contributes to the betterment of society.</p>
+                </div>
+
+                <!-- 2rd column -->
+                <div class="footer-column contact">
+                    <div class="footer-heading">
+                        <h3 class="footerheader">Contact</h3>
+                        <div class="footer-dropdown"><a class="footer-toggle"><i class="fa-solid fa-caret-down"></i></a></div>
+                    </div>
+                    <ul class="footer-drop-content footer-list emails">
+                        <li>Øyvind Telle:<a href="mailto:oytel7902@oslomet.no">oytel7902@oslomet.no</a></li>
+                        <li>Tamara Awadh:<a href="mailto:s355792@oslomet.no">s355792@oslomet.no </a></li>
+                        <li>Tarmiya Awadh:<a href="mailto:taawa5060@oslomet.no">taawa5060@oslomet.no </a></li>
+                    </ul>
                 </div>
 
                 <!-- 3rd column -->
-                <div class="footer-right-content">
+                <div class="footer-column some">
                     <div class="footer-heading">
-                        <ul class="box">
-                            <h4 class="footerheader">Contact</h4>
-                            <li class="names">Øyvind Telle:<a href="mailto:oytel7902@oslomet.no">oytel7902@oslomet.no</a></li>
-                            <li class="names">Tamara Awadh:<a href="mailto:s355792@oslomet.no">s355792@oslomet.no </a></li>
-                            <li class="names">Tarmiya Awadh:<a href="mailto:taawa5060@oslomet.no">taawa5060@oslomet.no </a></li>
-                        </u>
+                        <h3 class="footerheader">Newsletter</h3>
+                        <div class="footer-dropdown"><a class="footer-toggle"><i class="fa-solid fa-caret-down"></i></a></div>
+                    </div>
+                    <div class="footer-drop-content footer-list">
+                        <p class="footer-text">Join <strong>OsloMet</strong> mailing list to get weekly updates delivered directly to your inbox.</p>
+                        <form>
+                            <input type="email" class ="inputEmail" placeholder="Enter your email" required>
+                            <input type="submit" value ="Submit" class="inputSubmit">
+                        </form>
                     </div>
                 </div>
-            </div> <!-- 1st footer row -->
+            </div>
+
             <hr>
 
             <!-- 2nd row -->
             <div class="footer-bottom">
-                <p class="footer-text3">&#169; 2023 OsloMet Storbyuniversitetet.</p>
+                <p class="footer-text2">&#169; 2023 OsloMet. All Rights Reserved.</p>
+            
+                <div class="icons">
+                    <a href="https://www.facebook.com/oslomet/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/oslomet" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/oslomet/?hl=nb" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@OsloMetFilm" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </div> 
+    </div>
 
 </body>
 
-<script src="JS/script.js"></script>
+<script src="js/script.js"></script>
 
 </html>

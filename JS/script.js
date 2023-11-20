@@ -3,8 +3,8 @@ assigns it the value of the element with the id of 'toggle-button' from the HTML
 const menuToggle = document.getElementById('menu-toggle');
 
 /* Declares another constant variable named naviList and 
-assigns it the value of the element with the id of 'navi-list' from the HTML document */
-const naviList = document.getElementById('navi-list');
+assigns it the value of the element with the id of 'navi-list2' from the HTML document */
+const naviList = document.getElementById('navi-list2');
 
 /* Adds an event listener to the toggleButton variable, 
 which means that a function will be executed when the user clicks on the button */
@@ -26,7 +26,28 @@ for (let i = 0; i < footerToggle.length; i++) {
         footerList[i].classList.toggle('active-footer');
         // Gets the next sibling element, which is the heading
         let footerHeader = this.nextElementSibling;
-        // Toggles the active class on the heading element
-        footerHeader.classList.toggle('active-header');
     });
 }
+
+/** Code developed from: https://alvarotrigo.com/blog/sticky-navbar/ **/
+// Selects the .navbar element using a CSS selector
+const navbar = document.querySelector(".navbar");
+
+// Gets the viewport height (window.innerHeight) and the height of the navbar
+const viewportHeight = window.innerHeight;
+const navHeight = navbar.offsetHeight;
+
+// Adds a scroll event listener to the window
+window.addEventListener("scroll", () => {
+    // Gets the current scroll position (vertical offset from the top)
+    const scrollPos = window.scrollY;
+
+    // Checks if the scroll position is below the threshold for sticky behavior
+    if (scrollPos > viewportHeight - navHeight) {
+        // If true, adds the "sticky" class to the navbar
+        navbar.classList.add("sticky");
+    } else {
+        // Otherwise, removes the "sticky" class
+        navbar.classList.remove("sticky");
+    }
+});

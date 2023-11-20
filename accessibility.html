@@ -1,102 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="CSS/style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OsloMet Storbyuniversitetet</title>
+    <title>Accessbility</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/952dcc46a8.js" crossorigin="anonymous"></script>
+
+    <!-- Google font import; Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- google font import; Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- google font import; Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="article-body">
-        <!-- header -->
-        <header>
-            <nav class="navbar">
-                <div>
-                    <a href="index.html"><img src="img/oslomet-logo-black.svg" alt="logo" class="logo"></a>
-                </div>
+    <!-- header -->
+    <header>
+        <!-- navbar view in bigger than 992px sets logo in the middle with two unordered lists in row view without 'bulletpoints' on each side, everything is centred -->
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="list-item"><a href="technology.html">Technology</a></li>
+                <li class="list-item"><a class="active" href="accessibility.html">Accessibility</a></li>
+            </ul>
 
-                <ul class="nav-list" id="navi-list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
-                    <li class="list-item"><a href="accessibility.html">Accessibility</a></li>
-                    <li class="list-item"><a href="technology.html">Technology</a></li>
-                    <li class="list-item"><a href="pilestredet32.html">Pilestredet 32</a></li>
-                    <li class="list-item"><a href="Page2/data1200.html">Data1200</a></li>
-                </ul>
-                <div class ="menu" id="menu-toggle">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </div>
-            </nav>
-        </header>
-        <!-- content -->
-        <div class="content">
-            <div class="body-text-container">
-                <h1>The accessibility of this site</h1>
-                <h2 class="header-h2">Accessibility Test</h2>
-                <figure>
-                    <img src="img/accessibility-test.png" class="main-img" alt="Image of Accessibility Test"/>
-                        <figcaption>
-                            <div>
-                                <p class="caption"><a href="img/accessibility-test.png" data-height="1200" data-width="676">Enlarge</a> /Photo by Øyvind Telle.</p>
-                            </div>
-                        </figcaption>
-                </figure>
-                <h3 class="header-h3">How did we test:</h3>
-                <p class="body-text">We testet by:</p>
-                <ul class="body-text">
-                    <li>Opening site in chrome</li>
-                    <li>Investigating</li>
-                    <li>Opening lighthouse</li>
-                </ul>
-                <h3 class="header-h3">Coding choices for universal design:</h3>
-                <p class="body-text">We coded with this in mind:</p>
-                <ul class="body-text">
-                    <li>Good comments on all links</li>
-                    <li>Good structure</li>
-                    <li>Bla</li>
-                    <li>Bla</li>
-                </ul>
+            <div>
+                <a href="index.html"><img src="img/oslomet-logo.svg" alt="logo" class="logo"></a>
+            </div>
+
+            <ul class="nav-list">
+                <li class="list-item"><a href="pilestredet32.html">Pilestredet 32</a></li>
+                <li class="list-item"><a href="pilestredet35.html">Pilestredet 35</a></li>
+            </ul>
+            
+             <!-- when less than 992px a hamburger menu will appear with a drop down list -->
+            <div class ="menu" id="menu-toggle"> <!-- id from js -->
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+
+            <ul class="nav-list2" id="navi-list2"> <!-- id from js -->
+                <li class="list-item2"><a href="index.html">Home</a></li>
+                <li class="list-item2"><a href="pilestredet32.html">Pilestredet 32</a></li>
+                <li class="list-item2"><a href="pilestredet35.html">Pilestredet 35</a></li>
+                <li class="list-item2"><a href="technology.html">Technology</a></li>
+                <li class="list-item2"><a class="active" href="accessibility.html">Accessibility</a></li>
+            </ul> <!-- This navlist is specific for responsive media query for smaller screens, hence will not be visibile in desktop size.-->
+        </nav>
+    </header>
+
+    <div class="content">
+        <figure>
+            <img src="img/OsloMet-5.jpg" class="main-pic" alt="Image of OsloMet"/>
+            <figcaption>
+                <div><p class="caption">Photo by <a href="https://www.oslomet.no/" target="_blank">OsloMet</a></p></div>
+            </figcaption>
+        </figure>
+
+        <div class="heading-container">
+            <div class="content-heading">
+                <h1 class="h1">Accessibility</h1>
+                <p class="subheading">Our committment to uphold the Universal Design</div>
             </div>
         </div>
-     <!-- footer -->
-     <footer>
-        <div class="footer">
-        
+
+        <div class="body-text-container">
+            <p class="body-text">For the comprehensive evaluation of accessibility across all five pages of our website,  we utilized the browser's built-in inspect tool called "Lightroom". This enabled us to conduct an automated accessibility test, providing a detailed score out of 100 for each page. Remarkably, all pages scored 100%, reflecting a commitment to making our content universally accessible. This automated test ensures adherence to key accessibility standards, including proper labeling of elements, logical document structure, and sufficient color contrast.</p>
+        </div>
+
+        <div class="body-text-container h2-container">
+            <div>
+                <img src="img/Accessibility-1.png" class="text-img">
+                <figcaption>
+                    <p class="caption">Photo by Tamara Awadh</a></p>
+                </figcaption>
+            </div>
+            <h2 class="h2 h2-container">Page 1: Home</h2>
+            <p class="body-text">In crafting the "Explore OsloMet Campus" page, our primary focus was on creating an accessible and intuitive gateway to the diverse pages of the site. Acting as the home/landing page, it serves as a comprehensive overview of OsloMet, linking seamlessly to key sections. Emphasis was placed on linking to the main buildings, Pilestredet 32 and Pilestredet 35. Additionally, the introduction of the featured student article (Page 4) aims to enrich the visitor experience by showcasing exemplary student work.</p>
+            <p class="body-text"><strong>Key Achievements</strong></p>
+            <ul class="body-text">
+                <li><strong>General Introduction:</strong> Acting as the landing page, Explore OsloMet Campus introduces visitors to the essence of our academic hub, setting the tone for a user-friendly digital journey.</li>
+                <li><strong>Linking:</strong> Through careful coding choices, we seamlessly integrated links to the other 4 pages, facilitating easy navigation and exploration for all users.</li>
+                <li><strong>Contrast Optimization:</strong> In our pursuit of aligning with OsloMet's distinctive brand colors, extending beyond the traditional yellow and black palette, we introduced the vibrant color orange. Initially, we aimed to utilize this secondary orange hue for links. However, during an automated test, a contrast issue emerged when placing orange text against a white background. Swiftly adapting to this feedback, we promptly adjusted the link style, opting for an orange underline while retaining the black text color. This modification effectively addressed the contrast concern, ensuring that all visitors can effortlessly navigate the diverse offerings within OsloMet's digital realm.</li>
+            </ul>
+        </div>
+
+        <div class="body-text-container h2-container">
+            <img src="img/Accessibility-2.png" class="text-img">
+            <div>
+                <img src="img/Accessibility-3.png" class="text-img">
+                <figcaption>
+                    <p class="caption">Photo by Tamara Awadh</a></p>
+                </figcaption>
+            </div>
+            <h2 class="h2 h2-container">Pages 2 - 3: Pilestredet Buildings</h2>
+            <p class="body-text">The layout design for pages 2 and 3, showcasing various locations within the buildings, not only offers valuable insights but also aligns with HTML5 standards, contributing to the high accessibility score.</p>
+            <p class="body-text"><strong>Key Achievements</strong></p>
+            <ul class="body-text">
+                <li><strong>Semantic HTML Structure:</strong> The use of semantic HTML elements is a key adherence to HTML5 standards. Each location section consists of an image followed by a descriptive paragraph.</li>
+                <li><strong>Alt Texts for Images:</strong> Each image is accompanied by descriptive alternative text (alt text). This not only caters to users who may not be able to view the images but also aligns with accessibility best practices. This enhances the document's readability and assists assistive technologies in interpreting the content accurately. Screen readers can convey this information to users with visual impairments, ensuring an inclusive experience.</li>
+                <li><strong>Consistent and Intuitive Navigation:</strong> The consistent layout across both pages, featuring images followed by descriptive text, provides a predictable structure. This predictability is crucial for users with cognitive disabilities or those navigating with assistive technologies. It adheres to HTML5 standards by creating a cohesive and easily navigable user interface.</li>
+            </ul>
+        </div>
+
+        <div class="body-text-container h2-container">
+            <div>
+                <img src="img/Accessibility-4.png" class="text-img">
+                <figcaption>
+                    <p class="caption">Photo by Tamara Awadh</a></p>
+                </figcaption>
+            </div>
+            <h2 class="h2 h2-container">Page 4: Student Article</h2>
+            <p class="body-text">The OsloMet Chronicle's student article page achieves a 100% accessibility score. Design choices, like a navy background, white text, and yellow underlined links, ensure optimal color contrast (All colours are derived from the OsloMet branding colours). The article content is placed on a white background, surrounded by a navy border, which enhances text readability. Descriptive alt text for the main image fosters inclusivity, while semantic HTML and responsive design contribute to a well-structured, adaptable page. Overall, the design not only visually stands out but also prioritizes accessibility for a diverse audience.</p>
+            <p class="body-text"><strong>Key Achievements</strong></p>
+            <ul class="body-text">
+                <li><strong>Optimal Colour Contrast:</strong> Strategic design choices, such as a navy background, white text, and yellow underlined links, were implemented to ensure high color contrast.</li>
+                <li><strong>Enhanced Text Readability:</strong> The article body's white background, surrounded by a navy border, focuses the reader's attention, making the text more readable and creating a visually pleasing layout.</li>
+                <li><strong>Strucuted and Adaptable Design:</strong> Implementation of semantic HTML and a responsive design ensures a well-structured and adaptable page, catering to users accessing content across various devices.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-container">
+
             <!-- 1st Row -->
             <div class="footer-row">
-    
-                <div class="footer-right-content left">
+
                 <!-- 1st column -->
-                    <img src="img/oslomet-logo-black.svg" alt="logo" class="footer-logo">
-                    <p class="footer-text1"><strong>OsloMet</strong> skal være et urbant og mangfoldig universitet med tydelig internasjonalt preg, samtidig som vi er tett på samfunns- og arbeidslivets behov. Arbeidet vårt skal gjøres i en profesjonell organisasjon som er ledende å ta i bruk ny teknologi og nye løsninger.</p>
+                <div class="footer-column about">
+                    <img src="img/OsloMet-logo-2.png" alt="OsloMet" class="footer-logo">
+                    <p class="footer-text"><strong>OsloMet</strong> is committed to being a diverse and urban university with a clear international profile. We strive to be closely aligned with the needs of society and the labor market, and our work is carried out in a professional organization that is at the forefront of adopting new technology and innovative solutions. Our goal is to provide a world-class education to our students and to produce research that contributes to the betterment of society.</p>
                 </div>
-    
+
                 <!-- 2rd column -->
-                <div class="footer-right-content">
+                <div class="footer-column contact">
                     <div class="footer-heading">
-                        <ul class="box">
-                            <h4 class="footerheader">Contact</h4>
-                            <li class="names">Øyvind Telle:<a href="mailto:oytel7902@oslomet.no">oytel7902@oslomet.no</a></li>
-                            <li class="names">Tamara Awadh:<a href="mailto:s355792@oslomet.no">s355792@oslomet.no </a></li>
-                            <li class="names">Tarmiya Awadh:<a href="mailto:taawa5060@oslomet.no">taawa5060@oslomet.no </a></li>
-                        </u>
+                        <h4 class="footerheader">Contact</h4>
+                        <div class="footer-dropdown"><a class="footer-toggle"><i class="fa-solid fa-caret-down"></i></a></div>
+                    </div>
+                    <ul class="footer-drop-content footer-list emails">
+                        <li>Øyvind Telle:<a href="mailto:oytel7902@oslomet.no">oytel7902@oslomet.no</a></li>
+                        <li>Tamara Awadh:<a href="mailto:s355792@oslomet.no">s355792@oslomet.no </a></li>
+                        <li>Tarmiya Awadh:<a href="mailto:taawa5060@oslomet.no">taawa5060@oslomet.no </a></li>
+                    </ul>
+                </div>
+
+                <!-- 3rd column -->
+                <div class="footer-column some">
+                    <div class="footer-heading">
+                        <h4 class="footerheader">Newsletter</h4>
+                        <div class="footer-dropdown"><a class="footer-toggle"><i class="fa-solid fa-caret-down"></i></a></div>
+                    </div>
+                    <div class="footer-drop-content footer-list">
+                        <p class="footer-text">Join <strong>OsloMet</strong> mailing list to get weekly updates delivered directly to your inbox.</p>
+                        <form>
+                            <input type="email" class ="inputEmail" placeholder="Enter your email" required>
+                            <input type="submit" value ="Submit" class="inputSubmit">
+                        </form>
                     </div>
                 </div>
-            </div> <!-- 1st row -->
-    
+            </div>
+
             <hr>
-    
+
             <!-- 2nd row -->
             <div class="footer-bottom">
-                <p class="footer-text3">&#169; 2023 OsloMet Storbyuniversitetet.</p>
+                <p class="footer-text2">&#169; 2023 OsloMet. All Rights Reserved.</p>
+            
+                <div class="icons">
+                    <a href="https://www.facebook.com/oslomet/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/oslomet" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/oslomet/?hl=nb" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@OsloMetFilm" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
-        </div>
-    </footer>
-    
-    </body>
-
-    <script src="JS/script.js"></script>
-    
-    </html>
+        </div> 
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
