@@ -1,0 +1,666 @@
+/* universal box styling */
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* This removes any default margin that may be applied by the browser. */
+body {
+    margin: 0; 
+}
+
+/* sets the padding and background for the article */
+.article-body {
+    padding-right: 35px;
+    padding-left: 35px;
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #FFDC00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.logo {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* used to remove default list style (e.g bullet points) from the navigation list. */
+.nav-list {
+    list-style-type: none; 
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+/* look for links in the navbar */
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color:  #1A1110;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* look when the link in nav-list is active or cursor is hovering */
+.nav-list li a:hover,
+.nav-list li a.active { 
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #131212;
+}
+
+/* The menu and nav-list2 is for responsive media query only, 
+hence making it invisible in wider screens */
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* styling the 'hamburger' menu */
+.menu-line {
+    width: 20px;
+    height: 2px;
+    background-color:  #131212;
+    margin-bottom: 5px;
+}
+
+
+.nav-list2 {
+    display: none;
+}
+
+/** Sticky navbar **/
+/* The sticky class is added to the navbar with JS 
+when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFDC00;
+    border-bottom: none;
+} 
+
+/** Navbar; media query for responsive design on smaller screens **/
+
+@media all and (max-width: 992px) {
+    /* The direction of the navbar is set to column to stack the child elements vertically. */
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+        align-items: normal;
+    }
+    
+    /* The menu is positioned absolutely to place it at a specific position relative to its nearest positioned ancestor. */
+    .menu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+
+    /* A margin is added to the left of the logo to create some space between the logo and the edge of the screen. */
+    .logo {
+        margin-left: 20px;
+    }
+
+    /* The position of the logo is set to the start of the flex container to align it to the left. */
+    .navbar.logo {
+        align-items: flex-start;
+    }
+
+    /* The desktop nav list is hidden in this view to make room for the 'hamburger' menu dropdown content. */
+    .nav-list {
+        display: none;
+    }
+
+    /* The next 4 sections set the properties of the menu items when the 'hamburger menu' is clicked. 
+    The list items are displayed as blocks to stack them vertically and a border is added at the top of each item to separate them. */
+    .nav-list2 {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-list2 .list-item2 {
+        display: block;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #131212;
+        padding: 10px 0;
+    }
+
+    .nav-list2 li a:hover,
+    .nav-list2 li a.active { 
+        border-bottom: 0;
+        color: #ff8100;
+    }
+
+    /* The active class is used to show the navigation list when the 'hamburger' menu is clicked. */
+    .active {
+        display: block;
+    }
+}
+
+/* Content */
+/* margin at the bottom of the content is used to create space before the footer */
+.content {
+    margin-bottom: 90px;
+}
+
+/** Content; headings & subheadings **/
+/* given a width of 100% to make it responsive and fit the width of its container. */
+.main-pic {
+    width: 100%;
+}
+
+.heading-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.content-heading {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* The h1, h2, and h3 elements are styled to create a visual hierarchy among the headings. 
+   The font size decreases from h1 to h3 to indicate the level of importance. */
+.h1 {
+    font-size: 52px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
+.h2 {
+    font-size: 32px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+.h3 {
+    font-size: 22px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* sets the padding for the h2 container when used */
+.h2-container {
+    padding-top: 30px;
+}
+
+/* The subheadings are styled to be less prominent than the headings. 
+   This is done by using a smaller font size and a lighter font weight. */
+.subheading {
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.subheading-2 {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subheading-3 {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    padding-top: 20px;
+    margin: 0 10%;
+}
+
+/** Content; figures, captions & body text **/
+.caption {
+    text-indent: 20px;
+}
+
+.caption a {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ff8100;
+    color: #1A1110;
+    text-decoration: none;
+}
+
+.caption a:hover,
+.caption a.active {
+    font-weight: 500;
+}
+
+/* The figcaption tag is used to add captions to images in the content area. 
+   The text is styled to be less prominent than the rest of the content. */
+figcaption {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #4e4e4e;
+    text-decoration: none;
+    font-size: 13px;
+} 
+
+/* Links styling for body text */
+/* The links in the body text are styled to stand out from the rest of the text. 
+   A border is added at the bottom to indicate that they are interactive. */
+.body-text a {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #ff8100;
+    color: #1A1110;
+    text-decoration: none;
+}
+
+/* upon hovering or clicking the link, it removes the orange border and replaces it with orange text 
+to make the active link stand out and indicate it's interactive. */
+.body-text a:hover,
+.body-text a.active {
+    border: none;
+    color: #ff8100;
+}
+
+/* sets the container with a margin of 25% on the left and right */
+.body-text-container {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* sets the styling for the body text */
+.body-text {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* The list items in the body text are given a left margin and left padding to create some space before the text. */
+.body-text li {
+    margin-left: 20px;
+    padding-left: 0.4%;
+}
+
+/* a container that sets the margin for image-text */
+.image-text-container {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+
+/* sets the display as flex and in row with a gap between */
+.image-text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+/* sets the width of the picture to 100% to make it responsive and fit the width of its container.
+The overflow property is set to hidden to clip any content that spills out of the box.  */
+.text-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.text h2 {
+    margin-top: 20px;
+}
+
+/* The img-img class is designed as a flex container to place two images side by side with a gap of 10px. */
+.img-img {
+    display: flex;
+    gap: 10px;
+}
+
+/** Content; buttons **/
+/* button ref: https://www.w3schools.com/howto/howto_css_next_prev.asp */
+.readarticle {
+    background-color: #FFDC00;
+    padding: 4px 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1A1110;
+    float: right;
+}
+
+.openinghrs {
+    background-color: #FFDC00;
+    padding: 6px 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1A1110;
+    line-height: 1.8;
+    width: 210px;
+}
+
+/** Content; Campus Infoboxes **/
+.campus-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.campus {
+    margin-bottom: 10px;
+    background-color: #FFDC00;
+}
+
+.campus-img {
+    width: 100%;
+}
+
+.campus-content {
+    padding: 20px;
+}
+
+.campus-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+.campus-text {
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.campus-content a {
+    text-decoration: none;
+    color: white;
+}
+
+.readmore {
+    background-color: #1A1110;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+}
+
+.campus-content a:hover,
+.campus-content a.active { 
+    font-weight: 600;
+}
+
+/** Content; media query for responsive design on smaller screens **/
+@media all and ( max-width: 992px ) {
+
+    .heading-container {
+        margin-top: 30px;
+    }
+    
+    /* changes the flex direction of the image text row
+    to be vertical (column) instead of horizontal (row), allowing 
+    for a responsive layout adjustment on smaller screens. */
+    .image-text,
+    .img-img {
+        flex-direction: column;
+    } 
+    
+    /* changes order between image and text so that the image sits above the text in smaller screens */
+    .text-img {
+        order: 1;
+    }
+
+    .text {
+        order: 2;
+    }
+
+    .image-text-container {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #ccc;
+    }
+
+    .campus-row {
+        flex-direction: column;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .body-text-container {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+/* Footer */
+.footer {
+    background:  #131212;
+    color: #fff;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 90px;
+}
+
+/* The about and contact columns are given a flex-basis to control their size within the flex container. 
+   This helps to maintain a balanced layout within the footer. */
+
+.footer-column.about {
+    flex: 40%;
+}
+
+.footer-column.contact {
+    flex: 35%;
+}
+
+.footer-logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+/** Footer; header **/
+.footerheader {
+    color:#FFDC00;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-heading {
+    display: flex;
+    gap: 10px;
+}
+
+.footerheader a {
+    text-decoration: none;
+    color: #FFDC00;
+    padding-bottom: 2px;
+}
+
+/* dropdown menu is hidden in desktop display,
+    will be made visible in responsive media query for small screen sizes */
+.footer-dropdown {
+    display: none; 
+}
+
+/** Footer; list items **/
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer ul li {
+    color: #fff;
+    text-decoration: none;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+.footer ul li a:hover,
+.footer ul li a.active { 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-text {
+    font-family:'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.footer-text2 {
+    font-family:'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* A margin is added above the horizontal rule to 
+create some space before the next element. */
+hr {
+    margin-top: 20px;
+}
+
+/** Footer; SoMe icons **/
+.icons {
+    cursor: pointer;
+}
+
+.icons a {
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+}
+
+.icons i{
+    padding: 4px;
+}
+
+/** Footer; input form **/
+.inputSubmit {
+    background-color: #ff8100;
+    color: #fff;
+    font-size: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-color: #ff8100;
+    border-style: solid;
+}
+
+.inputEmail {
+    font-size: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #fff;
+}
+
+/** Footer; media query for responsive design on smaller screens **/
+@media screen and (max-width: 992px) {
+    /* Changing the flex direction to column, removing the gap, and aligning items to the start 
+   for the footer row when the screen size is 992px or less */
+    .footer-row {
+        flex-direction: column;
+        gap: 0;
+        align-items: normal;
+    }
+
+    .footer-column {
+        margin-top: 30px;
+    }
+
+    .footer ul {
+        padding-bottom: 0;
+    }
+
+    /* Making the dropdown menu visible when the screen size is 992px or less */
+    .footer-dropdown {
+        display: contents;
+    }
+
+    .footer-dropdown a {
+        cursor: pointer;
+    }
+
+    .footer-drop-content {
+        display: none;
+    }
+
+    .active-footer {
+        display: block;
+    }
+}
